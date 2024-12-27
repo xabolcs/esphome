@@ -12,11 +12,15 @@ CONFIG_SCHEMA = cv.Schema(
         cv.Optional("identification"): text_sensor.text_sensor_schema(),
         cv.Optional("p1_version"): text_sensor.text_sensor_schema(),
         cv.Optional("p1_version_be"): text_sensor.text_sensor_schema(),
+        cv.Optional("cosem_logical_device_name_hun"): text_sensor.text_sensor_schema(),
         cv.Optional("timestamp"): text_sensor.text_sensor_schema(),
         cv.Optional("electricity_tariff"): text_sensor.text_sensor_schema(),
         cv.Optional("electricity_failure_log"): text_sensor.text_sensor_schema(),
+        cv.Optional("breaker_status_hun"): text_sensor.text_sensor_schema(),
         cv.Optional("message_short"): text_sensor.text_sensor_schema(),
         cv.Optional("message_long"): text_sensor.text_sensor_schema(),
+        cv.Optional("equipment_id"): text_sensor.text_sensor_schema(),
+        cv.Optional("equipment_id_hun"): text_sensor.text_sensor_schema(),
         cv.Optional("gas_equipment_id"): text_sensor.text_sensor_schema(),
         cv.Optional("thermal_equipment_id"): text_sensor.text_sensor_schema(),
         cv.Optional("water_equipment_id"): text_sensor.text_sensor_schema(),
@@ -25,6 +29,7 @@ CONFIG_SCHEMA = cv.Schema(
         cv.Optional("telegram"): text_sensor.text_sensor_schema().extend(
             {cv.Optional(CONF_INTERNAL, default=True): cv.boolean}
         ),
+        cv.Optional("end_of_month_data_raw_hun"): text_sensor.text_sensor_schema(),
     }
 ).extend(cv.COMPONENT_SCHEMA)
 
